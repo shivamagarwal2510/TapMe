@@ -12,11 +12,13 @@ function Chat() {
   return (
     <div className="w-[45vw]  h-[80vh]">
       <div className="flex justify-between bg-[#676591] h-[8vh] items-center">
-        <div className="rounded-full overflow-hidden  w-[50px] h-[50px] m-2">
-          {data.user?.photoURL && <img src={data.user.photoURL} alt="name" />}
-        </div>
-        <div>
-          <span className="p-4 text-gray-300">{data.user?.displayName}</span>
+        <div className="flex items-center">
+          <div className="rounded-full overflow-hidden  w-[50px] h-[50px] m-2 text-center">
+            {data.user?.photoURL && <img src={data.user.photoURL} alt="name" />}
+          </div>
+          <div>
+            <span className="pr-4 text-gray-300">{data.user?.displayName}</span>
+          </div>
         </div>
         <div className="flex mx-4">
           <img src={Cam} alt="" className="h-[24px]" />

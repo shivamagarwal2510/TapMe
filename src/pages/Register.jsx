@@ -35,12 +35,12 @@ const Register = () => {
             // console.log(displayName);
             console.log("url of image ", downloadURL);
             await updateProfile(res.user, {
-              displayName: displayName.toLowerCase(),
+              displayName: displayName,
               photoURL: downloadURL,
             });
             await setDoc(doc(db, "users", res.user.uid), {
               uid: res.user.uid,
-              displayName: displayName.toLowerCase(),
+              displayName: displayName,
               email,
               photoURL: downloadURL,
             });

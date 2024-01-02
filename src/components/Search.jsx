@@ -24,10 +24,7 @@ function Search() {
   const { dispatch } = useContext(ChatsContext);
   const handleSearch = async () => {
     const UsersRef = collection(db, "users");
-    const q = query(
-      UsersRef,
-      where("displayName", "==", inputUser.toLocaleLowerCase())
-    );
+    const q = query(UsersRef, where("displayName", "==", inputUser));
     try {
       const querySnapshot = await getDocs(q);
       if (querySnapshot.empty) {

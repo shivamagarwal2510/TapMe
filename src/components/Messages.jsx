@@ -21,9 +21,8 @@ function Messages() {
   }, [data.user, data.chatId]);
   console.log("messages -> ", messages);
   return (
-    <div className="bg-[#ddddf7] h-[calc(100%-16vh)]">
-      {messages &&
-        messages.map((m, i) => <Message key={i} message={m.message} />)}
+    <div className="bg-[#ddddf7] h-[calc(100%-16vh)] flex flex-col overflow-y-scroll">
+      {messages && messages.map((m, i) => <Message message={m} key={i} />)}
     </div>
   );
 }

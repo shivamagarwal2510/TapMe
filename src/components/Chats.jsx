@@ -42,7 +42,10 @@ function Chats() {
             <p className="text-lg font-medium">
               {user[1].userInfo.displayName}
             </p>
-            <span className="text-xs"> {user[1].userInfo.lastMessage}</span>
+            <div className="text-xs overflow-hidden w-[80px] h-[15px]">
+              {" "}
+              {user[1].lastMessage}
+            </div>
           </div>
         </div>
       ))}
