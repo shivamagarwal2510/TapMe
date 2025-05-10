@@ -66,7 +66,7 @@ function Input() {
           className="h-[40px] w-[60px] px-[10px] bg-indigo-300 m-1"
           onClick={handleSend}
         >
-          Send
+          Send me
         </button>
       </div>
     </div>
